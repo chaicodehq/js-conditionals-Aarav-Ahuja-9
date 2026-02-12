@@ -18,10 +18,30 @@
  *   - If age is negative or not a number, return -1
  *   - isWeekend is a boolean
  *
- * @param {number} age - The customer's age
+ * @param {12} age - The customer's age
  * @param {boolean} isWeekend - Whether it's a weekend
  * @returns {number} The ticket price, or -1 for invalid input
  */
 export function getTicketPrice(age, isWeekend) {
-  // Your code here
+  let price;
+
+  if (age >= 0 && age <= 12) {
+    price = 8;
+  } else if (age > 12 && age <= 17) {
+    price = 12;
+  } else if (age > 17 && age <= 59) {
+    price = 15;
+  } else if  (age >= 60) {
+    price = 10;
+  } else {
+    price = -1;
+  }
+
+  if (isWeekend == true) {
+    price += 3 // OR :- price = price + 3
+  }
+
+  return price
 }
+
+console.log(getTicketPrice(18, false)) // OUTPUT :- 15
