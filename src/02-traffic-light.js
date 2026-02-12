@@ -22,5 +22,30 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+
+  // I found the below function while googling about javascript, and it is an higher function for now but i got this early.
+  let lowerCaseColor = color.toLowerCase(); // We can also use "var" but its legacy, we are in the future we will use new type of variables.
+
+  switch (lowerCaseColor) {
+    case "green":
+      return "Go"
+      break;
+
+    case "yellow":
+      return "Slow Down"
+      break;
+
+    case "red":
+      return "Stop"
+      break;
+    
+    case "flashing red":
+      return "Stop and Proceed With Caution"
+      break;
+
+    default:
+      return "Invalid Signal"
+  }
 }
+
+console.log(getTrafficAction("red"))
