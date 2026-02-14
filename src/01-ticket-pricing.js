@@ -41,7 +41,7 @@ export function getTicketPrice(age, isWeekend) {
     price += 3 // OR :- price = price + 3
   }
 
-  return price
+  return `Your ticket price is $${price}`
 }
 
 console.log(getTicketPrice(18, false)) // OUTPUT :- 15

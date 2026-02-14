@@ -75,7 +75,7 @@ export function calculateCoffeePrice(size, type, extras = {}) {
     price += 0.75
   }
 
-  return Number(price)
+  return `Your coffee price is $${Number(price.toFixed(2))}`
 }
 
 

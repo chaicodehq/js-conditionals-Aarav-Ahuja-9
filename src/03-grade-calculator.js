@@ -39,15 +39,15 @@ export function calculateGrade(score, hasExtraCredit) {
   }
 
   if (score >= 0 && score < 60) {
-    return "F"
+    return "Your grade is F"
   } else if (score >= 60 && score < 70) {
-    return "D"
+    return "Your grade is D"
   } else if (score >= 70 && score < 80) {
-    return "C"
+    return "Your grade is C"
   } else if (score >= 80 && score < 90) {
-    return "B"
+    return "Your grade is B"
   } else if (score >= 90 && score <= 100) {
-    return "A"
+    return "Your grade is A"
   } 
 }
 

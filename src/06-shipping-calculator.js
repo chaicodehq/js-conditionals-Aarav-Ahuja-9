@@ -61,7 +61,7 @@ export function calculateShipping(weight, country, orderTotal) {
     }
   }
   
-  return orderTotal;
+  return `Your shippment cost is $${orderTotal}`
 }
 
 console.log(calculateShipping(10, "US"));
